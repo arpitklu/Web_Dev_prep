@@ -3,13 +3,15 @@ h1{
 }
 
 h2{
-    color: aqua;
+    color: purple;
 }
-Here{
+button{
     margin: 40px;
     font-size: 20px;
     padding: 10px 10 px;
     background-color: aliceblue;
     color: red;
+    font-weight: 400;
+    border: 1.5px dotted purple;
 
 }
