@@ -1,0 +1,26 @@
+.block1{
+    color: white;
+    background-color: none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 590px;
+}
+.namediv{
+    display: inline;
+}
+.block2{
+    color: aqua;
+}
+.b21{
+    color: aquamarine;
+}
+.b22{
+    color: yellowgreen;
+}
+.name{
+    color:white;
+}
+body{
+    background-color: black;
+}
