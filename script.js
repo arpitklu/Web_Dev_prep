@@ -1,3 +1,6 @@
+// console.log('SCRIPT.JS')
+
+
 // console.warn("This is a warning")
 // console.error("Not allowed if you are not human")
 // alert("Humans only allowed")
@@ -56,29 +59,29 @@
 // OBJECTS
 
 
-var obj={
-    user:'Arpiit',
-    age:20
-}
-console.log(obj.user)
-console.log(obj.age)
+// var obj={
+//     user:'Arpiit',
+//     age:20
+// }
+// console.log(obj.user)
+// console.log(obj.age)
 
-var obj1={
-    model:'iphone',
-    price:60000,
-    color:'white'
-}
-var obj2={
-    model:'samsung',
-    price:65000,
-    color:'blue'
-}
-var obj2={
-    model:'xiaomi',
-    price:50000,
-    color:'silver'
-}
+// var obj1={
+//     model:'iphone',
+//     price:60000,
+//     color:'white'
+// }
+// var obj2={
+//     model:'samsung',
+//     price:65000,
+//     color:'blue'
+// }
+// var obj2={
+//     model:'xiaomi',
+//     price:50000,
+//     color:'silver'
+// }
 
-console.log(obj)
-console.log(obj1)
-console.log(obj2)
+// console.log(obj)
+// console.log(obj1)
+// console.log(obj2)
