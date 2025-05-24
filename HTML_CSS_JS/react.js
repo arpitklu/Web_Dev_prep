@@ -15,4 +15,12 @@
 // h1.innerHTML = "heyy"
 // root.appendChild(h1)
 
-console.log(React)
+
+//create an element using React.createElement.
+var h1 = React.createElement('h1',null,"Hello from React")
+//select the area/div uunder which you need changes
+var parent=document.querySelector("#parent")
+// initialized parent to root
+var root=ReactDOM.createRoot(parent)
+// rendered the desired changes to the desired location
+root.render(h1)
