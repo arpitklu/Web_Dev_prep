@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  color: aquamarine; /* ✅ Set global text color to black */
+  color: aquamarine; 
 }
 
 html,
@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  background-color: black; /* ✅ Set background to white */
+  background-color: black; 
 }
 
 button {
@@ -21,3 +21,9 @@ button {
   padding: 1px 1px;
   cursor: pointer;
 }
+
+h1{
+  color: crimson;
+}
+
+

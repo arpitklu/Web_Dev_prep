@@ -11,22 +11,31 @@
 
 
 
+// import React, { useState } from 'react'
+
+// const App = () => {
+
+//   const [Num, setNum] = useState()
+//   return (
+//     <div>
+//       <h1>The number is: {Num}</h1>
+//       <button onClick={()=>setNum(Num+10)}>Increment</button>
+//       <button onClick={()=>setNum(Num-10)}>Decrement</button>
+//     </div>
+//   )
+// }
+
+// export default App
 
 
-import React, { useState } from 'react'
+import React from 'react'
 
 const App = () => {
-
-  const [Num, setNum] = useState()
   return (
     <div>
-      <h1>The number is: {Num}</h1>
-      <button onClick={()=>setNum(Num+10)}>Increment</button>
-      <button onClick={()=>setNum(Num-10)}>Decrement</button>
+      <h1>hello gyss!!</h1>
     </div>
   )
 }
 
 export default App
-
-
