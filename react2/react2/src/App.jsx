@@ -4,16 +4,20 @@ import './index.css'
 
 import React from 'react'
 
-
 const App = () => {
   return (
-    <div>
+    <div className='min-h-screen bg-black'> 
+      
       <form >
-        <input className='px-3 font-semibold py-3 text-xl m-5 rounded' type="text" placeholder='Enter Your Name'/>
-        <button className='px-3 py-3 text-xl font-semibold bg-red-600 rounded'> Submit </button>
+        <input className='bg-white rounded' type="text" placeholder='Enter your name' />
+        <button className='bg-emerald-600'>Submit</button>
+        <button className='bg-yellow-400 rounded-2xl'> Submit2</button>
+
       </form>
+      
     </div>
   )
 }
 
 export default App
+

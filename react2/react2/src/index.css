@@ -1,11 +1,7 @@
-@import "tailwindcss";
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 
-*{
-  background-color: white;
-}
-button{
-  background: #000;
-}
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+
