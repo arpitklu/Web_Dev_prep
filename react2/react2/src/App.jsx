@@ -8,7 +8,7 @@ const App = () => {
     <>
       <div className='bg-black h-screen'>
         <Navbar /> {/* this is a component*/}
-        <Footer/>
+        <Footer/> {/* this is a component*/}
       </div>
     </>
   )
