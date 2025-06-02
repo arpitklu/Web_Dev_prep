@@ -1,42 +1,17 @@
-import { useState } from 'react'
-import './App.css'
-import './index.css'
-
 import React from 'react'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer' 
 
 const App = () => {
-
-  const [userName, setuserName] = useState('') // created an UserName
-
-
-  const submitHandler = (e) => {
-    e.preventDefault() //it will prevent the page from refreshing
-    console.log(userName)// prints inside the console.
-    setuserName('')// this will reset the value inside the placeholder after you submit.
-  }
   return (
-    <div className='min-h-screen bg-black'> 
-      
-      <form onSubmit={(e)=>{
-        submitHandler(e);
-      }}>
-        <input 
-        value={userName} // 2 way binding: like u r writing the values but also using the help of react at the same time to do so.
-        onChange={(e)=>{
-          setuserName(e.target.value) //u r telling react to set the value inside the placeholder as the value of username.
-        }}
-        //value="ARPPIT" //This is used to predefine the value inside the placeholder.
-        className='px-4 px-3 text-xl m-5 bg-white rounded' 
-        type="text" 
-        placeholder='Enter your name' 
-        />
-        <button className='px-4 px-3 text-xl font-semibold text-amber-50 bg-emerald-600 rounded'>Submit</button>
-
-      </form>
-      
-    </div>
+    
+    <>
+      <div className='bg-black h-screen'>
+        <Navbar /> {/* this is a component*/}
+        <Footer/>
+      </div>
+    </>
   )
 }
 
 export default App
-
