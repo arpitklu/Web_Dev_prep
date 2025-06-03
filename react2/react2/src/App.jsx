@@ -1,16 +1,12 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer' 
+import Card from './components/Card'
 
 const App = () => {
+  const user="Arppit"
   return (
-    
-    <>
-      <div className='bg-black h-screen'>
-        <Navbar /> {/* this is a component*/}
-        <Footer/> {/* this is a component*/}
-      </div>
-    </>
+    <div>
+      <Card userN={user}/>
+    </div>
   )
 }
 
