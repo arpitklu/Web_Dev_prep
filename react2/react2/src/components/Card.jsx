@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Card = (user) => {
-    console.log(user.userN)
+const Card = (props) => {
+  
 
   return (
     <div>
-        <h1 className='text-xl font-extrabold text-black'>UserName is {user.userN}</h1>
+        <h1 className='text-xl font-extrabold text-black'>UserName is {props.a}</h1>
     </div>
   )
 }
