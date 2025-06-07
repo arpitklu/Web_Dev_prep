@@ -9,6 +9,7 @@ const Card1 = (props) => {
         <h1 className='text-2xl font-semibold mb-2'>{props.name}</h1>
         <h2 className='mb-2'>{props.city}, {props.age}</h2>
         <h3 className='mb-4'>{props.profession}</h3>
+        <h3 className='mb-4'>Ready to Help!!</h3>
         <button className= 'hover:cursor-pointer bg-emerald-700 text-white px-4 py-2 rounded text-medium active:scale-90'>Add User</button>
         </div>
     </>

@@ -11,7 +11,7 @@ const App = () => {
     "city": "Damanjodi",
     "age": 21,
     "profession": "Software Engineer",
-    "profile_photo": "https://drive.google.com/file/d/1EyIDgUMd7j8Uz7pM5GUmgb4cOCxeuxE5/view"
+    "profile_photo": "https://scontent.fvga5-1.fna.fbcdn.net/v/t39.30808-6/495571137_986600396980794_867957577859272317_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=3on3m3Z9k2kQ7kNvwElYev_&_nc_oc=AdnKXmPQSaaJWq3RhtURANrYewSabars772_H3ntKWk1VIG8_Yxg5qNFYTsH3y8XzIQ&_nc_zt=23&_nc_ht=scontent.fvga5-1.fna&_nc_gid=OlyLGE8u-AGmRfNnrBZV9Q&oh=00_AfOkhNkGijFdZZngzZmNqAqbAUaF8prJhihdXpbRv6TbmQ&oe=684A3193"
   },
   {
     "name": "Ankit KM",
