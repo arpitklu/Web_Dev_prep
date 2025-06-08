@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Card1 from './components/Card1'
+import Card from './components/Card'
 
 const App = () => {
 
@@ -54,6 +55,21 @@ const App = () => {
         {users.map(function(elem, idx) {
           return (
             <Card1
+              key={idx}
+              name={elem.name}
+              city={elem.city}
+              age={elem.age}
+              profession={elem.profession}
+              profile_photo={elem.profile_photo}
+            />
+          );
+        })}
+      </div>
+
+      <div className='p-10 '>
+        {users.map(function(elem, idx) {
+          return (
+            <Card
               key={idx}
               name={elem.name}
               city={elem.city}
