@@ -50,7 +50,7 @@ const App = () => {
 
   return (
     
-    <div className='bg-black m-5 h-screen '>
+    <div className='bg-black m-5 min-h-screen'>
       <div className='p-10 '>
         {users.map(function(elem, idx) {
           return (
