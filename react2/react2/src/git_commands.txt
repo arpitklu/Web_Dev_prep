@@ -1,0 +1,17 @@
+# check branch:
+git branch
+
+# create branch
+git checkout -b branchName
+
+# after finishing
+git add .
+git commit -m "feat: "
+git push origin branchName
+
+# go to github and merge pull requests
+
+# then:
+git checkout main
+git pull origin main
+
