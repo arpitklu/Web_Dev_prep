@@ -15,3 +15,6 @@ git push origin branchName
 git checkout main
 git pull origin main
 
+# to switch to any branch:
+git checkout branchName
+
