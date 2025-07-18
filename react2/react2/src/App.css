@@ -3,7 +3,7 @@
 
 /* @tailwind base;
 @tailwind components; */
-@tailwind utilities;
+/* @tailwind utilities;
 
 body{
     background-color: #111;
@@ -18,7 +18,7 @@ h1{
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-}
+} */
 
 
 
