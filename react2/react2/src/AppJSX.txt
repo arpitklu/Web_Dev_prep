@@ -210,8 +210,51 @@ export default App
 ####################################################################################################################################################################
 #React Router DOM
 
-routing: means going from one page to another.
-but react doesnt have routing in-built.
-if we want routing in react then we use external libraries like: "REACT ROUTER DOM".
+//routing: means going from one page to another.
+//but react doesnt have routing in-built.
+//if we want routing in react then we use external libraries like: "REACT ROUTER DOM".
 
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+
+import Product from './pages/Product';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+
+
+const App = () => {
+  return (
+    <div>
+      
+      {/* <Navbar>
+
+      </Navbar> */}
+
+      <Header>
+
+      </Header>
+      <Routes>
+        
+        <Route path='/' element={<Home/>} />
+        <Route path='/about' element={<About />}/>
+        <Route path='/contact' element={<Contact />}/>
+        <Route path='/home' element={<Home />}/>
+        <Route path='/product' element={<Product />}/>
+
+      </Routes>
+    </div>
+  )
+}
+
+
+export default App
+
+####################################################################################################################################################################
+#CONTEXT-API
+
+//Context API is used to centralize the data, so that anyone can access that data without asking someone else for that data.
+//CONTEXT API is built-in react.
 

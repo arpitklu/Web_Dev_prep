@@ -8,13 +8,11 @@ body{
 }
 
 h1{
-    position: absolute;
+    
     text-decoration: underline;
     font-size: 70px;
     font-weight: 600;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 

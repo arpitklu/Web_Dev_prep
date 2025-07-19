@@ -1,37 +1,21 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-
-import Product from './pages/Product';
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-
+import React, { useContext } from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import { DataContext } from './context/UserContext'
 
 const App = () => {
+
+  const data = useContext(DataContext)
+
+  console.log(data)
+
   return (
     <div>
-      
-      {/* <Navbar>
-
-      </Navbar> */}
-
-      <Header>
-
-      </Header>
-      <Routes>
-        
-        <Route path='/' element={<Home/>} />
-        <Route path='/about' element={<About />}/>
-        <Route path='/contact' element={<Contact />}/>
-        <Route path='/home' element={<Home />}/>
-        <Route path='/product' element={<Product />}/>
-
-      </Routes>
+      <h1>This is APP {data}</h1>
+      <Header></Header>
+      <Footer></Footer>
     </div>
   )
 }
-
 
 export default App
