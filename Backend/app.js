@@ -1,6 +1,8 @@
 const express = require('express')
 const morgan = require('morgan')
 const app = express()
+const userModel = require('./models/user')
+const dbConnection = require('./config/db')
 
 app.use(morgan('dev'))
 // we use the below mentioned 2 built-in middlewares to read the data that is received from frontend.
