@@ -1,0 +1,73 @@
+// using 'http'
+
+// const http = require('http')
+
+
+// const server = http.createServer((req,res) => {    //req = request & res = response
+//     // console.log(req.url)
+//     // res.end('Hellow world!!')
+
+//     if(req.url=="/about"){
+//         res.end("About page!!")
+//     }
+
+//     if( req.url == "/profile"){
+//         res.end("Profile page!!")
+//     }
+//     if(req.url == "/"){
+//         res.end("Home page!!")
+//     }
+// })
+
+// server.listen(3000)
+
+
+// using express
+
+const express = require('express')
+const morgan = require('morgan')
+const app = express()
+
+app.use(morgan('dev'))
+
+app.set("view engine","ejs")        //view engine!!
+
+
+//#############################################
+// CUSTOM MIDDLE-WARE:
+// app.use((req,res,next)=>{
+//     console.log("This is middleware!!")
+//     const a=2
+//     const b=3
+//     console.log(a+b)
+//     return next()
+// })
+//#############################################
+
+
+app.get('/',(req,res,next)=>{
+    const a=5
+    const b=10
+    console.log("####")
+    console.log(a+b)
+
+    next()
+},
+(req,res)=>{
+    // res.send('Hellow World')      //when we use express we use the "res.send"
+    res.render('index')              //when we use express with "view engine" we use "res.render"
+})
+
+app.get('/about',(req,res)=>{
+    res.send("About Page!!")
+})
+
+app.get('/profile',(req,res)=>{
+    res.send("Profile Page!!")
+})
+
+app.listen(3000,()=>{
+    console.log("Server running at port 3000");
+})
+
+

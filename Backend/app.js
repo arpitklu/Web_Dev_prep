@@ -1,60 +1,14 @@
-// using 'http'
-
-// const http = require('http')
-
-
-// const server = http.createServer((req,res) => {    //req = request & res = response
-//     // console.log(req.url)
-//     // res.end('Hellow world!!')
-
-//     if(req.url=="/about"){
-//         res.end("About page!!")
-//     }
-
-//     if( req.url == "/profile"){
-//         res.end("Profile page!!")
-//     }
-//     if(req.url == "/"){
-//         res.end("Home page!!")
-//     }
-// })
-
-// server.listen(3000)
-
-
-// using express
-
 const express = require('express')
 const morgan = require('morgan')
 const app = express()
 
 app.use(morgan('dev'))
-
+// we use the below mentioned 2 built-in middlewares to read the data that is received from frontend.
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 app.set("view engine","ejs")        //view engine!!
 
-
-//############################################
-// CUSTOM MIDDLE-WARE:
-// app.use((req,res,next)=>{
-//     console.log("This is middleware!!")
-//     const a=2
-//     const b=3
-//     console.log(a+b)
-//     return next()
-// })
-//#############################################
-
-
-app.get('/',(req,res,next)=>{
-    const a=5
-    const b=10
-    console.log("####")
-    console.log(a+b)
-
-    next()
-},
-(req,res)=>{
-    // res.send('Hellow World')      //when we use express we use the "res.send"
+app.get('/',(req,res)=>{
     res.render('index')              //when we use express with "view engine" we use "res.render"
 })
 
@@ -64,6 +18,17 @@ app.get('/about',(req,res)=>{
 
 app.get('/profile',(req,res)=>{
     res.send("Profile Page!!")
+})
+
+// app.get('/get-form-data', (req,res)=>{
+//     console.log(req.query)
+//     res.send('data received')
+// })
+// get method is used to send data from server(backend) to frontend.
+//post method is used to bring data from frontend to backend(server).
+app.post('/get-form-data', (req,res)=>{
+    console.log(req.body)
+    res.send('data received')
 })
 
 app.listen(3000,()=>{
