@@ -6,6 +6,9 @@ app.use(morgan('dev'))
 // we use the below mentioned 2 built-in middlewares to read the data that is received from frontend.
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+// we use the below mentioned middleware to link the css file to the frontend
+app.use(express.static("public"))
+
 app.set("view engine","ejs")        //view engine!!
 
 app.get('/',(req,res)=>{
