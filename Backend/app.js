@@ -25,10 +25,37 @@
 // using express
 
 const express = require('express')
+const morgan = require('morgan')
 const app = express()
 
-app.get('/',(req,res)=>{
-    res.send('Hellow World!!')
+app.use(morgan('dev'))
+
+app.set("view engine","ejs")        //view engine!!
+
+
+//############################################
+// CUSTOM MIDDLE-WARE:
+// app.use((req,res,next)=>{
+//     console.log("This is middleware!!")
+//     const a=2
+//     const b=3
+//     console.log(a+b)
+//     return next()
+// })
+//#############################################
+
+
+app.get('/',(req,res,next)=>{
+    const a=5
+    const b=10
+    console.log("####")
+    console.log(a+b)
+
+    next()
+},
+(req,res)=>{
+    // res.send('Hellow World')      //when we use express we use the "res.send"
+    res.render('index')              //when we use express with "view engine" we use "res.render"
 })
 
 app.get('/about',(req,res)=>{
@@ -39,4 +66,6 @@ app.get('/profile',(req,res)=>{
     res.send("Profile Page!!")
 })
 
-app.listen(3000)
+app.listen(3000,()=>{
+    console.log("Server running at port 3000");
+})
