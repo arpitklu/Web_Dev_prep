@@ -65,6 +65,12 @@ app.get('/about',(req,res)=>{
 app.get('/profile',(req,res)=>{
     res.send("Profile Page!!")
 })
+// get method is used to send data from server(backend) to frontend.
+//post method is used to bring data from frontend to backend(server).
+app.post('/get-form-data', (req,res)=>{
+    console.log(req.body)
+    res.send('data received')
+})
 
 app.listen(3000,()=>{
     console.log("Server running at port 3000");

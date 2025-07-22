@@ -1,8 +1,8 @@
 const express = require('express')
 const morgan = require('morgan')
 const app = express()
-const userModel = require('./models/user')
 const dbConnection = require('./config/db')
+const userModel = require('./models/user')
 
 app.use(morgan('dev'))
 // we use the below mentioned 2 built-in middlewares to read the data that is received from frontend.
@@ -25,12 +25,48 @@ app.get('/profile',(req,res)=>{
     res.send("Profile Page!!")
 })
 
-// app.get('/get-form-data', (req,res)=>{
-//     console.log(req.query)
-//     res.send('data received')
-// })
-// get method is used to send data from server(backend) to frontend.
-//post method is used to bring data from frontend to backend(server).
+app.get('/register',(req,res)=>{
+    res.render('register')
+})
+
+// CREATE OPERATION
+app.post('/register', async (req, res)=>{
+    const { username, email, password } = req.body
+    const newUser = await userModel.create({
+        username : username,
+        email : email,
+        password : password
+    })
+    res.send(newUser)
+})
+
+//READ OPERATION("find()")
+app.get('/get-users' , (req, res)=>{
+    userModel.find({
+        username : "b"
+    }).then((users)=>{
+        res.send(users)
+    })
+})
+
+//UPDATE OPERATION
+app.get('/update-user', async (req,res)=>{
+    await userModel.findOneAndUpdate({
+        username : 'b'
+    },{
+        email : 'c@c.com'
+    })
+    res.send('user updated')
+})
+
+//DELETE OPERATION
+app.get('/delete-user', async (req, res)=>{
+    await userModel.findOneAndDelete({
+        username : "b"
+    })
+    res.send('user deleted!')
+})
+
 app.post('/get-form-data', (req,res)=>{
     console.log(req.body)
     res.send('data received')
