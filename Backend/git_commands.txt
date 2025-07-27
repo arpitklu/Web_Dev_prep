@@ -7,6 +7,11 @@ git checkout -b branchName
 # to switch to any branch:
 git checkout branchName
 
+# to delete any branch:
+- first go to another branch
+- then:
+git branch -d branchName
+
 # after finishing
 git add .
 git commit -m "feat: "
